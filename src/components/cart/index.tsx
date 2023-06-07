@@ -18,6 +18,8 @@ export default function Cart() {
 
     const handleClickCancle = () => {
         store.clear();
+
+        navigate('/');
     }
 
     const handleClickOrder = async () => {

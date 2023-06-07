@@ -9,7 +9,7 @@ const routes = [
         children: [
             { path: '/', element: <IntroPage /> },
             { path: '/order', element: <OrderPage /> },
-            { path: '/orderComplete', element: <OrderCompletePage /> },
+            { path: '/order/complete', element: <OrderCompletePage /> },
         ]
     }
 ]

@@ -11,7 +11,6 @@ export default function Menu({ menu }: MenuProps) {
 
     const handleClickAdd = (food: Food) => {
         store.add(food);
-        console.log('ehlsl')
     }
 
     if (!menu.length) {

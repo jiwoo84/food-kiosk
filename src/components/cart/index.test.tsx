@@ -17,7 +17,7 @@ jest.mock('../../hooks/useCartStore.ts', () => () => [state]);
 describe('Cart', () => {
 
     it('renders summary', () => {
-        render(<Cart />);
+        renderWithProviders(<Cart />, { path: '/orders' });
 
         screen.getByText(/주문내역/);
         screen.getByText(/총 결제 예상금액/);
@@ -29,7 +29,7 @@ describe('Cart', () => {
         })
 
         it('renders zero count', () => {
-            render(<Cart />);
+            renderWithProviders(<Cart />, { path: '/orders' });
 
             screen.getByText(/0개/);
             screen.getByText(/0원/);
@@ -42,7 +42,7 @@ describe('Cart', () => {
         })
 
         it('renders selected food list and count', () => {
-            render(<Cart />);
+            renderWithProviders(<Cart />, { path: '/orders' });
 
             fixtures.menu.forEach(food => {
                 screen.getByText(new RegExp(food.name));

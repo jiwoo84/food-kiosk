@@ -31,9 +31,9 @@ describe('routes', () => {
 
   context('when the current path is "/orderComplete"', () => {
     it('renders the order page', () => {
-      renderRouter('/orderComplete');
+      renderRouter('/order/complete?orderId="id"');
 
-      screen.getByText(/주문이 완료되었습니다!/)
+      screen.getByText(/주문을 진행해주세요!/)
     })
   })
 });
