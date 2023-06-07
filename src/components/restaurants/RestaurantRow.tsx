@@ -1,17 +1,17 @@
-import FoodItem from "./FoodItem";
+import Menu from "./Menu";
+import Restaurant from "../../types/Restaurant";
 
-export default function RestaurantRow({ restaurant }) {
+type RestaurantRowProps = {
+    restaurant: Restaurant;
+}
+export default function RestaurantRow({ restaurant }: RestaurantRowProps) {
     const { name, menu } = restaurant;
 
     return (
         <div>
             <h2>{name}</h2>
             <div>
-                {menu.map(food => (
-                    <FoodItem
-                        key={food.id}
-                        food={food} />
-                ))}
+                <Menu menu={menu} />
             </div>
         </div>
     )
