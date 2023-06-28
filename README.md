@@ -1,4 +1,4 @@
-# Food Kiosk
+# frontend-survival-week08
 
 ## 서버 실행하기
 
